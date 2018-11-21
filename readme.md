@@ -4,7 +4,7 @@
 This extension aims to stop CSRF attacks against eZ Publish 
 implementing the easiest remediation described in [detectify](https://support.detectify.com/customer/portal/articles/1969819-login-csrf).
 
-It works like the official extension eZ Form Token adding input & output filter events, 
+It works like the official extension [eZ Form Token](https://doc.ez.no/eZ-Publish/Technical-manual/4.6/Features/eZ-Form-token-extension) adding input & output filter events, 
 which verify that POST requests have an input matching with a generated custom cookie.
 The difference with eZ Form Token is that the verification is done on requests made by the anonymous user.
 
