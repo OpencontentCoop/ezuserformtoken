@@ -1,0 +1,19 @@
+{
+  "name": "opencontent/ezuserformtoken-ls",
+  "description": "Opencontent eZ Publish Legacy User Form Token extension",
+  "type": "ezpublish-legacy-extension",
+  "authors": [
+    {
+      "name": "OpenContent",
+      "homepage": "http://www.opencontent.it"
+    }
+  ],
+  "license": "GPL-2.0",
+  "minimum-stability": "dev",
+  "require": {
+    "ezsystems/ezpublish-legacy-installer": "*"
+  },
+  "extra": {
+    "ezpublish-legacy-extension-name": "ezuserformtoken"
+  }
+}
