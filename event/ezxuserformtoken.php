@@ -197,7 +197,7 @@ class ezxUserFormToken
         $name = self::getFormField();
         $value = $token;
         $expire = $ini->hasVariable('UserFormToken', 'CookieExpiry') ? $ini->variable('UserFormToken', 'CookieExpiry') : time() + 60 * 60 * 24;
-        $path = $ini->hasVariable('UserFormToken', 'CookiePath') ? $ini->variable('UserFormToken', 'CookiePath') : "";
+        $path = $ini->hasVariable('UserFormToken', 'CookiePath') ? $ini->variable('UserFormToken', 'CookiePath') : "/";
         $domain = $ini->hasVariable('UserFormToken', 'CookieDomain') ? $ini->variable('UserFormToken', 'CookieDomain') : "";
         $secure = $ini->hasVariable('UserFormToken', 'CookieSecure') ? $ini->variable('UserFormToken', 'CookieSecure') : false;
         $httponly = $ini->hasVariable('UserFormToken', 'CookieHttponly') && $ini->variable('UserFormToken', 'CookieHttponly') == 'true' ? true : false;
