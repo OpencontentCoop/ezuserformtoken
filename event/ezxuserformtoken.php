@@ -207,8 +207,14 @@ class ezxUserFormToken
 
     protected static function removeCookie()
     {
+        $ini = eZINI::instance();
         $name = self::getFormField();
-        setcookie($name, "", time() - 3600);
+        $path = $ini->hasVariable('UserFormToken', 'CookiePath') ? $ini->variable('UserFormToken', 'CookiePath') : "/";
+        $domain = $ini->hasVariable('UserFormToken', 'CookieDomain') ? $ini->variable('UserFormToken', 'CookieDomain') : "";
+        $secure = $ini->hasVariable('UserFormToken', 'CookieSecure') ? $ini->variable('UserFormToken', 'CookieSecure') : false;
+        $httponly = $ini->hasVariable('UserFormToken', 'CookieHttponly') && $ini->variable('UserFormToken', 'CookieHttponly') == 'true' ? true : false;
+
+        setcookie($name, "", time() - 3600, $path, $domain, $secure, $httponly);
     }
 
 
